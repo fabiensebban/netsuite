@@ -70,6 +70,9 @@ module NetSuite
             if response.success?
               new(response.body)
             else
+              if response.respond_to?(:to_hash)
+                @response_hash = response.to_hash[:initialize_response][:read_response]
+              end
               raise InitializationError, "#{self}.initialize with #{object} failed."
             end
           end
