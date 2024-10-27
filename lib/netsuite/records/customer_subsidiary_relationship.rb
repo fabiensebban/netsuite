@@ -2,6 +2,7 @@ module NetSuite
   module Records
     class CustomerSubsidiaryRelationship
       include Support::Fields
+      include Support::RecordRefs
       include Support::Records
       include Support::Actions
 
