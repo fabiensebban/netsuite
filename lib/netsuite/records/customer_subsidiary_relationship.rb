@@ -5,6 +5,7 @@ module NetSuite
       include Support::RecordRefs
       include Support::Records
       include Support::Actions
+      include Namespaces::ListRel
 
       actions :get, :get_list, :add, :search
 
