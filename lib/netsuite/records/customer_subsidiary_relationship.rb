@@ -12,10 +12,10 @@ module NetSuite
 
       fields :is_primary_sub, :is_inactive
 
-      field :subsidiary,          Subsidiary
+      #field :subsidiary,          Subsidiary
       field :custom_field_list,   CustomFieldList
 
-      record_refs :entity, :primary_currency
+      record_refs :entity, :primary_currency, :subsidiary
 
       attr_reader :internal_id
       attr_accessor :external_id
