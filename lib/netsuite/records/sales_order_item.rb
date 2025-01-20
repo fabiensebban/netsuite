@@ -18,7 +18,7 @@ module NetSuite
         :shipping_cost, :tax1_amt, :tax_rate1, :tax_rate2,
         :vsoe_allocation, :vsoe_amount, :vsoe_deferral,
         :vsoe_delivered, :vsoe_permit_discount, :vsoe_price,
-        :ship_group
+        :ship_group, :inventory_subsidiary, :inventory_location
 
       field :custom_field_list, CustomFieldList
 
