@@ -19,7 +19,12 @@ module NetSuite
         {
           'platformMsgs:initializeRecord' => {
             'platformCore:type'      => NetSuite::Support::Records.netsuite_type(@klass),
-            'platformCore:location'  => NetSuite::Records::RecordRef.new(internal_id: 608),
+            'platformCore:location'  => {},
+            :attributes!             => { 
+              'platformCore:location' => {
+                'internalId' =>  608 
+              }
+            },
             'platformCore:reference' => {},
             :attributes!             => {
               'platformCore:reference' => {
