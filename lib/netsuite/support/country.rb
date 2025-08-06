@@ -187,7 +187,7 @@ module NetSuite
         'PT' => '_portugal',
         'PR' => '_puertoRico',
         'QA' => '_qatar',
-        'RE' => '_reunionIsland',
+        'RE' => '_reunion',
         'RO' => '_romania',
         'RU' => '_russianFederation',
         'RW' => '_rwanda',
