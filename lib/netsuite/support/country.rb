@@ -1,7 +1,6 @@
 module NetSuite
   module Support
     class Country
-
       ISO_TO_NETSUITE = {
         'AF' => '_afghanistan',
         'AX' => '_alandIslands',
@@ -29,7 +28,7 @@ module NetSuite
         'BJ' => '_benin',
         'BM' => '_bermuda',
         'BT' => '_bhutan',
-        'BO' => '_bolivia',
+        'BO' => '_boliviaPlurinationalStateOf', # ancien: _bolivia
         'BQ' => '_bonaireSaintEustatiusAndSaba',
         'BA' => '_bosniaAndHerzegovina',
         'BW' => '_botswana',
@@ -44,7 +43,7 @@ module NetSuite
         'CM' => '_cameroon',
         'CA' => '_canada',
         'IC' => '_canaryIslands',
-        'CV' => '_capeVerde',
+        'CV' => '_caboVerde', # ancien: _capeVerde
         'KY' => '_caymanIslands',
         'CF' => '_centralAfricanRepublic',
         'EA' => '_ceutaAndMelilla',
@@ -55,29 +54,30 @@ module NetSuite
         'CC' => '_cocosKeelingIslands',
         'CO' => '_colombia',
         'KM' => '_comoros',
-        'CD' => '_congoDemocraticPeoplesRepublic',
-        'CG' => '_congoRepublicOf',
+        'CD' => '_congoTheDemocraticRepublicOfThe', # ancien: _congoDemocraticPeoplesRepublic
+        'CG' => '_congo', # ancien: _congoRepublicOf
         'CK' => '_cookIslands',
         'CR' => '_costaRica',
         'CI' => '_coteDIvoire',
-        'HR' => '_croatiaHrvatska',
+        'HR' => '_croatia', # ancien: _croatiaHrvatska
         'CU' => '_cuba',
         'CW' => '_curacao',
         'CY' => '_cyprus',
-        'CZ' => '_czechRepublic',
+        'CZ' => '_czechia',
         'DK' => '_denmark',
         'DJ' => '_djibouti',
         'DM' => '_dominica',
         'DO' => '_dominicanRepublic',
-        'TL' => '_eastTimor',
+        'TL' => '_timorLeste', # ancien: _eastTimor
         'EC' => '_ecuador',
         'EG' => '_egypt',
         'SV' => '_elSalvador',
         'GQ' => '_equatorialGuinea',
         'ER' => '_eritrea',
         'EE' => '_estonia',
+        'SZ' => '_eswatini', # ancien: _swaziland
         'ET' => '_ethiopia',
-        'FK' => '_falklandIslands',
+        'FK' => '_falklandIslandsMalvinas', # ancien: _falklandIslands
         'FO' => '_faroeIslands',
         'FJ' => '_fiji',
         'FI' => '_finland',
@@ -102,8 +102,8 @@ module NetSuite
         'GW' => '_guineaBissau',
         'GY' => '_guyana',
         'HT' => '_haiti',
-        'HM' => '_heardAndMcDonaldIslands',
-        'VA' => '_holySeeCityVaticanState',
+        'HM' => '_heardIslandAndMcDonaldIslands', # ancien: _heardAndMcDonaldIslands
+        'VA' => '_holySee', # ancien: _holySeeCityVaticanState
         'HN' => '_honduras',
         'HK' => '_hongKong',
         'HU' => '_hungary',
@@ -123,8 +123,8 @@ module NetSuite
         'KZ' => '_kazakhstan',
         'KE' => '_kenya',
         'KI' => '_kiribati',
-        'KP' => '_koreaDemocraticPeoplesRepublic',
-        'KR' => '_koreaRepublicOf',
+        'KP' => '_koreaTheDemocraticPeoplesRepublicOf', # ancien: _koreaDemocraticPeoplesRepublic
+        'KR' => '_koreaTheRepublicOf', # ancien: _koreaRepublicOf
         'XK' => '_kosovo',
         'KW' => '_kuwait',
         'KG' => '_kyrgyzstan',
@@ -137,8 +137,8 @@ module NetSuite
         'LI' => '_liechtenstein',
         'LT' => '_lithuania',
         'LU' => '_luxembourg',
-        'MO' => '_macau',
-        'MK' => '_macedonia',
+        'MO' => '_macao', # ancien: _macau
+        'MK' => '_northMacedonia', # ancien: _macedonia
         'MG' => '_madagascar',
         'MW' => '_malawi',
         'MY' => '_malaysia',
@@ -151,8 +151,8 @@ module NetSuite
         'MU' => '_mauritius',
         'YT' => '_mayotte',
         'MX' => '_mexico',
-        'FM' => '_micronesiaFederalStateOf',
-        'MD' => '_moldovaRepublicOf',
+        'FM' => '_micronesiaFederalStatesOf', # ancien: _micronesiaFederalStateOf
+        'MD' => '_moldovaTheRepublicOf', # ancien: _moldovaRepublicOf
         'MC' => '_monaco',
         'MN' => '_mongolia',
         'ME' => '_montenegro',
@@ -176,13 +176,13 @@ module NetSuite
         'OM' => '_oman',
         'PK' => '_pakistan',
         'PW' => '_palau',
-        'PS' => '_stateOfPalestine',
+        'PS' => '_palestineStateOf', # ancien: _stateOfPalestine
         'PA' => '_panama',
         'PG' => '_papuaNewGuinea',
         'PY' => '_paraguay',
         'PE' => '_peru',
         'PH' => '_philippines',
-        'PN' => '_pitcairnIsland',
+        'PN' => '_pitcairn', # ancien: _pitcairnIsland
         'PL' => '_poland',
         'PT' => '_portugal',
         'PR' => '_puertoRico',
@@ -192,10 +192,10 @@ module NetSuite
         'RU' => '_russianFederation',
         'RW' => '_rwanda',
         'BL' => '_saintBarthelemy',
-        'SH' => '_saintHelena',
+        'SH' => '_saintHelenaAscensionAndTristanDaCunha', # ancien: _saintHelena
         'KN' => '_saintKittsAndNevis',
         'LC' => '_saintLucia',
-        'MF' => '_saintMartin',
+        'MF' => '_saintMartinFrenchPart', # ancien: _saintMartin
         'VC' => '_saintVincentAndTheGrenadines',
         'SM' => '_sanMarino',
         'ST' => '_saoTomeAndPrincipe',
@@ -205,34 +205,33 @@ module NetSuite
         'SC' => '_seychelles',
         'SL' => '_sierraLeone',
         'SG' => '_singapore',
-        'SX' => '_sintMaarten',
-        'SK' => '_slovakRepublic',
+        'SX' => '_sintMaartenDutchPart', # ancien: _sintMaarten
+        'SK' => '_slovakia', # ancien: _slovakRepublic
         'SI' => '_slovenia',
         'SB' => '_solomonIslands',
         'SO' => '_somalia',
         'ZA' => '_southAfrica',
-        'GS' => '_southGeorgia',
+        'GS' => '_southGeorgiaAndTheSouthSandwichIslands', # ancien: _southGeorgia
         'SS' => '_southSudan',
         'ES' => '_spain',
         'LK' => '_sriLanka',
-        'PM' => '_stPierreAndMiquelon',
+        'PM' => '_saintPierreAndMiquelon', # ancien: _stPierreAndMiquelon
         'SD' => '_sudan',
         'SR' => '_suriname',
         'SJ' => '_svalbardAndJanMayenIslands',
-        'SZ' => '_swaziland',
         'SE' => '_sweden',
         'CH' => '_switzerland',
         'SY' => '_syrianArabRepublic',
         'TW' => '_taiwan',
         'TJ' => '_tajikistan',
-        'TZ' => '_tanzania',
+        'TZ' => '_tanzaniaTheUnitedRepublicOf', # ancien: _tanzania
         'TH' => '_thailand',
         'TG' => '_togo',
         'TK' => '_tokelau',
         'TO' => '_tonga',
         'TT' => '_trinidadAndTobago',
         'TN' => '_tunisia',
-        'TR' => '_turkey',
+        'TR' => '_turkiye', # ancien: _turkey
         'TM' => '_turkmenistan',
         'TC' => '_turksAndCaicosIslands',
         'TV' => '_tuvalu',
@@ -240,16 +239,16 @@ module NetSuite
         'UA' => '_ukraine',
         'AE' => '_unitedArabEmirates',
         'GB' => '_unitedKingdom',
-        'UK' => '_unitedKingdom',
+        'UK' => '_unitedKingdom', # ajouté pour compat, pas dans la doc officielle
         'US' => '_unitedStates',
         'UY' => '_uruguay',
-        'UM' => '_uSMinorOutlyingIslands',
+        'UM' => '_unitedStatesMinorOutlyingIslands', # ancien: _uSMinorOutlyingIslands
         'UZ' => '_uzbekistan',
         'VU' => '_vanuatu',
-        'VE' => '_venezuela',
-        'VN' => '_vietnam',
+        'VE' => '_venezuelaBolivarianRepublicOf', # ancien: _venezuela
+        'VN' => '_vietNam', # ancien: _vietnam
         'VG' => '_virginIslandsBritish',
-        'VI' => '_virginIslandsUSA',
+        'VI' => '_virginIslandsUS', # ancien: _virginIslandsUSA
         'WF' => '_wallisAndFutunaIslands',
         'EH' => '_westernSahara',
         'WS' => '_samoa',
@@ -259,18 +258,18 @@ module NetSuite
       }
 
       def initialize(iso_or_name = '')
-        if iso_or_name =~ /^[A-Z]{2}/
-          @id = iso_to_netsuite.fetch(iso_or_name)
-        else
-          @id = iso_or_name
-        end
+        @id = if iso_or_name =~ /^[A-Z]{2}/
+                iso_to_netsuite.fetch(iso_or_name)
+              else
+                iso_or_name
+              end
       end
 
       def ==(other)
-        other.class == self.class && other.to_iso == self.to_iso
+        other.class == self.class && other.to_iso == to_iso
       end
 
-      alias :eql? :==
+      alias eql? ==
 
       def to_iso
         iso_to_netsuite.key(@id)
@@ -283,7 +282,6 @@ module NetSuite
       def iso_to_netsuite
         ISO_TO_NETSUITE
       end
-
     end
   end
 end
